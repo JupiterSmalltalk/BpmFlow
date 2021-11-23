@@ -80,7 +80,8 @@ GsDeployer deploy: [
 GsDeployer deploy: [
   Metacello new
     baseline: 'EndlessOnline';
-    repository: 'filetree:///opt/git/JupiterSmalltalk/Endless-Server/repository';
+    repository: 'filetree:///opt/git/RabidGames/Endless-Server/repository';
+    onConflictUseLoaded;
     onLock: [:ex | ex honor];
     load ].
 %
@@ -162,6 +163,7 @@ GemStoneServerConfiguration default baseUrlDocumentation: 'https://bpmflow.gitbo
 WAPersistenceOrbeonLayer register.
 "To register a centralized Component to access other applications"
 WABpmCentralPortal register. "ipaddress:port/bpmflow"
+EORoot reinstall.
 %
 commit
 logout
