@@ -11,3 +11,4 @@ Session.vim
 .netrwhist
 *~
 /js
+.DS_Store

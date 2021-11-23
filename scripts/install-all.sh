@@ -6,7 +6,7 @@ usage() {
   error "Usage: ${PROGRAM_NAME} -s DBNAME"
 }
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-  echo "Usage: install-all STONE_NAME "
+  echo "Usage: install-all -s STONE_NAME "
   echo "Install the entire BPM application on Stone named STONE_NAME"; 
   echo "The environment variable GS_HOME must be set";    
   exit 0
@@ -74,7 +74,13 @@ GsDeployer deploy: [
 GsDeployer deploy: [
   Metacello new
     baseline: 'BpmFlow';
-    repository: 'github://brunobuzzi/BpmFlow:master/repository';
+    repository: 'filetree:///opt/git/JupiterSmalltalk/BpmFlow/repository';
+    onLock: [:ex | ex honor];
+    load ].
+GsDeployer deploy: [
+  Metacello new
+    baseline: 'EndlessOnline';
+    repository: 'filetree:///opt/git/JupiterSmalltalk/Endless-Server/repository';
     onLock: [:ex | ex honor];
     load ].
 %
