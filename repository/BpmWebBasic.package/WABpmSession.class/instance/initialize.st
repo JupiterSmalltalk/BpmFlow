@@ -1,6 +1,4 @@
 other
 initialize
-
-	super initialize.
-
-	systemRoot := Globals at: #SystemRoot.
+  super initialize.
+  systemRoot := Smalltalk at: #'SystemRoot'

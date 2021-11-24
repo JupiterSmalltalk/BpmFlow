@@ -38,7 +38,7 @@ fi
 info "Start: BPM Packages Installation"
 
 #Topaz Installation Script
-$GS_HOME/bin/startTopaz $STONE -il <<EOF >>install-all.log
+$GS_HOME/bin/startTopaz $STONE -il  -T 900000 <<EOF >>install-all.log
 set user DataCurator password swordfish gemstone $STONE
 login
 exec
