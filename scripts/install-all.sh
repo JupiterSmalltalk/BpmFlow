@@ -163,7 +163,7 @@ GemStoneServerConfiguration default baseUrlDocumentation: 'https://bpmflow.gitbo
 WAPersistenceOrbeonLayer register.
 "To register a centralized Component to access other applications"
 WABpmCentralPortal register. "ipaddress:port/bpmflow"
-EORoot reinstall.
+EOUtility setupWEndlessOnline.
 %
 commit
 logout
